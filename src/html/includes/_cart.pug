@@ -1,0 +1,59 @@
+//- Goodies mackup
+-
+  var goodies = [
+    {
+      name: 'Apple MacBook Air 13',
+      image: '@img/macbook.jpg',
+      price: 2000,
+      count: 1,
+    },
+    {
+      name: 'Mac Pro',
+      image: '@img/mac-pro.jpg',
+      price: 12000,
+      count: 1,
+    },
+    {
+      name: 'Apple watch',
+      image: '@img/watch.jpg',
+      price: 800,
+      count: 1,
+    },
+  ]
+-
+  var totals = {
+    count: 3,
+    total: 14800,
+  }
+
+//- Cart section
+section.section-cart
+  .container.section-cart__container 
+    h3.section-cart__title Goodies Cart
+
+    .section-cart__table
+
+      .section-cart__table_header
+        span.section-cart__table_header-name name
+        span.section-cart__table_header-count count
+        span.section-cart__table_header-price price
+
+      each goodie in goodies
+        .section-cart__table_row
+          img(src= goodie.image, alt= goodie.name).section-cart__img
+          span.section-cart__table_name= goodie.name
+          .section-cart__table_count
+            span= goodie.count
+            .section-cart__table_controls
+              button(type="button").section-cart__table_controls-up
+                +svg-icon('up-arrow', 'section-cart__table_controls-icon')
+              button(type="button").section-cart__table_controls-down
+                +svg-icon('down-arrow', 'section-cart__table_controls-icon')
+          span.section-cart__table_price= goodie.price * goodie.count
+          button(type="button").close-control
+            span.close-control__item
+
+      .section-cart__table_footer
+        span.section-cart__table_footer-count= totals.count
+        span.section-cart__table_footer-total= totals.total
+

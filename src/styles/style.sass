@@ -6,37 +6,37 @@
 html,
 body
   scroll-behavior: smooth
-  font-family: 'Open Sans', sans-serif
+  font-family: 'Monserrat', sans-serif
   font-size: 10px
   line-height: 1.6
 body
   height: 100vh
   font-size: 1.4rem
   line-height: 1.6
-  .main
-    height: 100%
-    background-color: #fc4
-    &-container
-      padding: 2rem
-      &__title
-        font-size: 4rem
-        font-weight: 700
-        text-align: center
-      &__image
-        max-width: 40%
-        margin: 2rem auto 0
-        border-radius: .5rem
-        overflow: hidden
-        box-shadow: 0 0 .8rem rgba(0, 0, 0, .5)
+h1,
+h2,
+h3,
+h4
+  font-weight: 700
+  line-height: 1.2
+h1
+  font-size: 4.4em
+h2
+  font-size: 3.4em
+h3
+  font-size: 2.8em
+h4
+  font-size: 1.8em
 
-.social-networks
-  width: 100%
-  &__icon
-    margin: 2rem calc(50% - 1.5rem) 0
-    width: 4rem
-    height: 4rem
+// Cart
++cart
 
-// burger icons
-+borger($main-dark, 4rem)
+// Controls (params: color, size, top, right)
++close(#7E9BBD, 1.2rem, 0, 0)
+.close-control
+  position: initial
+  margin-left: auto
+  margin-right: 3rem
+
 
 @import 'media'
