@@ -40,16 +40,17 @@ section.section-cart
 
       each goodie in goodies
         .section-cart__table_row
-          img(src= goodie.image, alt= goodie.name).section-cart__img
-          span.section-cart__table_name= goodie.name
-          .section-cart__table_count
-            span= goodie.count
-            .section-cart__table_controls
-              button(type="button").section-cart__table_controls-up
-                +svg-icon('up-arrow', 'section-cart__table_controls-icon')
-              button(type="button").section-cart__table_controls-down
-                +svg-icon('down-arrow', 'section-cart__table_controls-icon')
-          span.section-cart__table_price= goodie.price * goodie.count
+          img(src= goodie.image, alt= goodie.name).section-cart__table_row-img
+          span.section-cart__table_row-name= goodie.name
+          .section-cart__table_row-count
+            .section-cart__table_row-count__box
+              input(type="number", min="1", max="50" value= goodie.count).section-cart__table_row-count__input
+            .section-cart__table_row-controls
+              button(type="button").section-cart__table_row-controls-up
+                +svg-icon('up-arrow', 'section-cart__table_row-controls-icon')
+              button(type="button").section-cart__table_row-controls-down
+                +svg-icon('down-arrow', 'section-cart__table_row-controls-icon')
+          span.section-cart__table_row-price= goodie.price * goodie.count
           button(type="button").close-control
             span.close-control__item
 
