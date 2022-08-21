@@ -50,7 +50,8 @@ section.section-cart
                 +svg-icon('up-arrow', 'section-cart__table_row-controls-icon')
               button(type="button").section-cart__table_row-controls-down
                 +svg-icon('down-arrow', 'section-cart__table_row-controls-icon')
-          span.section-cart__table_row-price= goodie.price * goodie.count
+          span $
+            span.section-cart__table_row-price= goodie.price * goodie.count
           button(type="button").close-control
             span.close-control__item
 
